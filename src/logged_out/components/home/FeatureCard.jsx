@@ -10,7 +10,7 @@ const styles = theme => ({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: theme.spacing(3),
-    padding: theme.spacing(1) * 1.5
+    padding: theme.spacing(1) * 1.5,
   }
 });
 
@@ -37,26 +37,39 @@ function shadeColor(hex, percent) {
 }
 
 function FeatureCard(props) {
-  const { classes, Icon, color, headline, text } = props;
+  const { classes, Icon, color, headline, text, shadow } = props;
   return (
     <Fragment>
-      <div
-        // We will set color and fill here, due to some prios complications
-        className={classes.iconWrapper}
+      <div 
         style={{
-          color: color,
-          backgroundColor: shadeColor(color, 0.5),
-          fill: color
+          boxShadow: "2px 3px 7px 2px #888888",
+          borderRadius: "20px",
+          padding: "20px",
+          height: "100%",
+
         }}
       >
-        {Icon}
+        <div
+          // We will set color and fill here, due to some prios complications
+          className={classes.iconWrapper}
+          style={{
+            color: color,
+            backgroundColor: shadeColor(color, 0.5),
+            fill: color,
+          }}
+          
+          
+        >
+          {Icon}
+        </div>
+        <Typography variant="h5" paragraph>
+          {headline}
+        </Typography>
+        <Typography variant="body1" color="textSecondary">
+          {text}
+        </Typography>
       </div>
-      <Typography variant="h5" paragraph>
-        {headline}
-      </Typography>
-      <Typography variant="body1" color="textSecondary">
-        {text}
-      </Typography>
+      
     </Fragment>
   );
 }
