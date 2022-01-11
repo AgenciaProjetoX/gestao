@@ -67,14 +67,14 @@ function PricingSection(props) {
             data-aos="zoom-in-up"
           >
             <PriceCard
-              title="Starter"
+              title="Pequenos negócios"
               pricing={
                 <span>
-                  $14.99
-                  <Typography display="inline"> / month</Typography>
+                  R$29,90
+                  <Typography display="inline"> / mês</Typography>
                 </span>
               }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
+              features={["Até 100 alunos", "Sistema completo", "Com Anúncios", "Domínio (seunome.grupoprox.com)", "Atualizações periódicas", "Suporte básico", "5GB de armazenamento", ]}
             />
           </Grid>
           <Grid
@@ -88,14 +88,14 @@ function PricingSection(props) {
           >
             <PriceCard
               highlighted
-              title="Premium"
+              title="Intermediário"
               pricing={
                 <span>
-                  $29.99
-                  <Typography display="inline"> / month</Typography>
+                  R$44,90
+                  <Typography display="inline"> / mês</Typography>
                 </span>
               }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
+              features={["Até 250 alunos" , "Sistema completo", "Sem Anúncios", "Domínio próprio", "Atualizações periódicas", "Suporte prioritário", "15GB de armazenamento", "Portal do aluno"]}
             />
           </Grid>
           <Grid
@@ -108,14 +108,14 @@ function PricingSection(props) {
             data-aos-delay={isWidthUp("md", width) ? "400" : "0"}
           >
             <PriceCard
-              title="Business"
+              title="Escolas em crescimento"
               pricing={
                 <span>
                   $49.99
                   <Typography display="inline"> / month</Typography>
                 </span>
               }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
+              features={["Sistema completo", "Sem Anúncios", "Domínio próprio", "Atualizações periódicas", "Suporte prioritário", ]}
             />
           </Grid>
           <Grid

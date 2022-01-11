@@ -15,6 +15,8 @@ import HighlightedInformation from "../../../shared/components/HighlightedInform
 import ButtonCircularProgress from "../../../shared/components/ButtonCircularProgress";
 import VisibilityPasswordTextField from "../../../shared/components/VisibilityPasswordTextField";
 
+import { auth } from '../../../services/firebase';
+
 const styles = (theme) => ({
   forgotPassword: {
     marginTop: theme.spacing(2),
@@ -53,6 +55,9 @@ function LoginDialog(props) {
   const login = useCallback(() => {
     setIsLoading(true);
     setStatus(null);
+
+    
+
     if (loginEmail.current.value !== "test@web.com") {
       setTimeout(() => {
         setStatus("invalidEmail");
